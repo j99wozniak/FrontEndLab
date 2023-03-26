@@ -1,14 +1,14 @@
 body {
-    background-color: rgb(58, 58, 23);
+    background-color: #394648;
 }
 #content {
     max-width: 600px;
     margin: auto;
-    background-color: darkolivegreen;
-    color:azure;
+    background-color: #69995D;
+    color:#F8E9E9;
     border-radius: 16px;
     border-style: outset ;
-    border-color: chartreuse;
+    border-color: #CBAC88;
 }
 
 h1 {
@@ -20,22 +20,21 @@ h1 {
 a {
 	padding: 8px 15px;
     border-width: 3px;
-    border-color: rgb(210, 199, 221);
     background-color: cadetblue;
 }
 a:active {
-    color:chocolate;
+    color:#394648;
     font-weight: 600;
-    background-color: cadetblue;
+    background-color: #CBAC88;
 }
 a:visited {
-    color:cornsilk;
-    background-color:darkslateblue;
+    color:#F8E9E9;
+    background-color:#394648;
 }
 a:hover {
-    color: azure;
+    color: #394648;
     text-decoration: overline underline;
-    background-color:darkblue;
+    background-color:#EDB6A3;
 }
 
 p {
@@ -62,6 +61,13 @@ table {
 }
 td, th{
     padding: 10px;
+}
+th {
+    color:#394648 ;
+    background-color: #EDB6A3;
+}
+td {
+    background-color: #CBAC88;
 }
 
 li {

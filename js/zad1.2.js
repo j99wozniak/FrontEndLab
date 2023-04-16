@@ -1,10 +1,71 @@
 
 function ex2(peeps){
-    console.log("Wszystkie kobiety: ");
+    console.log("\\\\ Wszystkie kobiety: ");
     peeps.forEach(element => {
         if(element.gender=="F"){
-            console.log(element.firstName + "\n");
+            console.log(element.firstName);
         }
+    });
+
+    console.log("\\\\ Wszystkie osoby starsze niż 30 lat: ");
+    peeps.forEach(element => {
+        if(element.age>30){
+            console.log(element.firstName + ", lat: " + element.age);
+        }
+    });
+
+    console.log("\\\\ Wszystkie osoby z trójką dzieci: ");
+    peeps.forEach(element => {
+        if(element.childs.length==3){
+            let children = "";
+            element.childs.forEach(child => children += child.firstName+"; ")
+            console.log(element.firstName + ": " + children);
+        }
+    });
+    
+
+    console.log("\\\\ Wszystkie osoby z dwójką córek: ");
+    peeps.forEach(element => {
+        let daughters = "";
+        let daughter_count = 0;
+        element.childs.forEach(child => {
+            if(child.gender=="F"){
+            daughters += child.firstName+"; ";
+            daughter_count += 1;
+            }
+        });
+        if(daughter_count==2){
+            console.log(element.firstName + ": " + daughters);
+        }
+    });
+
+    console.log("\\\\ Wszystkie osoby z dwójką dzieci starszymi niż 10 lat: ");
+    peeps.forEach(element => {
+        if(element.childs.length==2){
+            let children = "";
+            let old_children_count = 0;
+            element.childs.forEach(child => {
+                if(child.age>10){
+                    children += child.firstName+"; ";
+                    old_children_count += 1;
+                }
+            });
+            if(old_children_count==2){
+                console.log(element.firstName + ": " + children);
+            }
+        }
+    });
+
+    console.log("\\\\ Wszystkie osoby i dzieci młodsze niż 20 lat: ");
+    peeps.forEach(element => {
+        if(element.age<20){
+            console.log(element.firstName + " (osoba)");
+        }
+        element.childs.forEach(child => {
+            if(child.age<20){
+                console.log(child.firstName + " (dziecko)");
+            }
+        });
     });
 }
 
